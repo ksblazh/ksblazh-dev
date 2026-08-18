@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Brand tile: the dark-engineering canvas with a neon K. Fixed colors on
+       purpose — favicons do not follow the page theme. -->
+  <rect width="64" height="64" rx="14" fill="#0a0f14"/>
+  <path d="M24 16v32M42 17 24 33m4.5-4 14 18" fill="none" stroke="#3ce6a5" stroke-width="5.5" stroke-linecap="round"/>
+</svg>

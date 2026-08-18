@@ -1,0 +1,290 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Design tokens — dark engineering: dark canvas, one neon accent, mono
+   details, glow on hovers. Both themes are the same language: light is the
+   daylight reading of it, not a second design.
+
+   Theming runs on `color-scheme` + `light-dark()`: tokens are declared once,
+   the theme toggle only flips `data-theme` on <html>, and with no override
+   the system preference applies natively. Every fg/bg pair below clears
+   WCAG AA (checked at 4.5:1+).
+--------------------------------------------------------------------------- */
+
+:root {
+  color-scheme: light dark;
+
+  --canvas: light-dark(#f6f9f8, #0a0f14);
+  --card: light-dark(#ffffff, #101720);
+  --fg: light-dark(#101c1a, #e2ecf2);
+  --muted: light-dark(#4e6360, #9fb1bd);
+  --accent: light-dark(#087454, #3ce6a5);
+  --edge: light-dark(rgba(16, 28, 26, 0.14), rgba(226, 236, 242, 0.1));
+  --grid-dot: light-dark(rgba(16, 28, 26, 0.07), rgba(226, 236, 242, 0.055));
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-card: var(--card);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-edge: var(--edge);
+
+  /* Variable fonts come from next/font/local in app/layout.tsx. */
+  --font-sans: var(--font-space-grotesk), ui-sans-serif, system-ui,
+    -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, "SF Mono",
+    "Cascadia Code", Menlo, Consolas, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    /* Plain hex first: browsers without light-dark() still get a readable
+       (light) page instead of unset colors. */
+    background-color: #f6f9f8;
+    color: #101c1a;
+    background-color: var(--canvas);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    /* Faint dot grid + an accent halo behind the hero: static engineering
+       texture, zero cost to the animation budget. */
+    background-image: radial-gradient(
+        1100px 480px at 50% -120px,
+        color-mix(in oklab, var(--accent) 9%, transparent),
+        transparent 70%
+      ),
+      radial-gradient(var(--grid-dot) 1px, transparent 1px);
+    background-size: 100% 640px, 26px 26px;
+    background-repeat: no-repeat, repeat;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--canvas);
+  }
+}
+
+@layer components {
+  /* --- Hero entrance — the page's only entrance scene. Pure CSS so the text
+     paints long before hydration (mobile LCP budget); each line sets --rise
+     to its slot in the stagger. --- */
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .rise {
+    animation: rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: calc(80ms + var(--rise, 0) * 90ms);
+  }
+
+  /* --- Micro-hovers. Movement and glow animate transform/opacity only;
+     color swaps are deliberately instant. --- */
+  .glow-card {
+    position: relative;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .glow-card::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-shadow:
+      0 0 0 1px color-mix(in oklab, var(--accent) 55%, transparent),
+      0 8px 32px -10px color-mix(in oklab, var(--accent) 40%, transparent);
+  }
+
+  .glow-card:hover,
+  .glow-card:focus-within {
+    transform: translateY(-2px);
+  }
+
+  .glow-card:hover::after,
+  .glow-card:focus-within::after {
+    opacity: 1;
+  }
+
+  /* Sliding underline for nav-like links: transform-only, no layout shift. */
+  .slide-link {
+    position: relative;
+  }
+
+  .slide-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -3px;
+    height: 1px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .slide-link:hover::after,
+  .slide-link:focus-visible::after {
+    transform: scaleX(1);
+  }
+
+  /* Buttons: solid = the neon, ghost = hairline. Glow rides a pseudo-element
+     so hover animates opacity, not box-shadow. */
+  .btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.375rem;
+    padding: 0.625rem 1.125rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    box-shadow: 0 4px 24px -6px color-mix(in oklab, var(--accent) 55%, transparent);
+  }
+
+  .btn:hover {
+    transform: translateY(-1px);
+  }
+
+  .btn:hover::after {
+    opacity: 1;
+  }
+
+  .btn-solid {
+    background: var(--accent);
+    color: var(--canvas);
+  }
+
+  .btn-ghost {
+    border: 1px solid var(--edge);
+    color: var(--fg);
+  }
+
+  .btn-ghost:hover {
+    border-color: color-mix(in oklab, var(--accent) 55%, transparent);
+    color: var(--accent);
+  }
+
+  /* Skip link: hidden until keyboard focus. */
+  .skip-link {
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 100;
+    border-radius: 0.375rem;
+    background: var(--accent);
+    color: var(--canvas);
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transform: translateY(-300%);
+  }
+
+  .skip-link:focus-visible {
+    transform: none;
+  }
+
+  /* Theme-dependent visibility (icons in the theme toggle). Mirrors the
+     resolved scheme: data-theme override first, system preference otherwise. */
+  .when-dark {
+    display: none;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .when-dark {
+      display: block;
+    }
+
+    :root:not([data-theme="light"]) .when-light {
+      display: none;
+    }
+  }
+
+  :root[data-theme="dark"] .when-dark {
+    display: block;
+  }
+
+  :root[data-theme="dark"] .when-light {
+    display: none;
+  }
+}
+
+/* --- Page transitions: a short crossfade via the View Transitions API;
+   React's <ViewTransition> drives it on client navigations. --- */
+::view-transition {
+  pointer-events: none;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 220ms;
+}
+
+/* --- prefers-reduced-motion kills everything: CSS entrances, hovers,
+   view transitions; Framer Motion reveals are forced visible (their inline
+   styles lose to !important) and MotionConfig stops the engine itself. --- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.001s !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.001s !important;
+  }
+
+  ::view-transition-old(*),
+  ::view-transition-new(*),
+  ::view-transition-group(*) {
+    animation: none !important;
+  }
+
+  /* Animated-in content lands in its final state outright — no timing games. */
+  .rise,
+  [data-reveal] {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
