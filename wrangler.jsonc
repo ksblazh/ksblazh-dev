@@ -1,0 +1,12 @@
+// Cloudflare Workers deployment: the site is a fully static export, served
+// as static assets — no server code, no framework adapter.
+// Build: `npm run build` → out/, deploy: `npx wrangler deploy`.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ksblazh-dev",
+  "compatibility_date": "2026-08-17",
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}
