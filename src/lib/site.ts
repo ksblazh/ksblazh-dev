@@ -12,9 +12,9 @@ export const site = {
   github: "https://github.com/ksblazh",
   // Joins the contact row once the profile is live.
   linkedin: null as string | null,
-  // Becomes "/resume.pdf" once the PDF lands in public/; until then the
-  // Resume buttons stay hidden rather than pointing at a 404.
-  resumeUrl: null as string | null,
+  // Set to null to hide the Resume buttons (e.g. while the PDF is being
+  // replaced) rather than point them at a 404.
+  resumeUrl: "/resume.pdf" as string | null,
   // GA4 measurement id comes from the deploy environment, not the repo, so
   // enabling analytics is a hosting setting rather than a code change.
   gaId: process.env.NEXT_PUBLIC_GA_ID ?? null,

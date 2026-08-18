@@ -1,0 +1,107 @@
+%PDF-1.4
+%ту╧╙
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Length 5831 >>
+stream
+BT /F2 16 Tf 1 0 0 1 50 728.0 Tm (KSENIIA BLAZHKOVSKAIA) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 50 715.0 Tm (Frontend Developer) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 50 703.0 Tm (Orlando, FL ╖ ksblazh@gmail.com ╖ ksblazh.dev ╖ github.com/ksblazh) Tj ET
+BT /F2 10.5 Tf 1 0 0 1 50 683.5 Tm (SUMMARY) Tj ET
+50 680.5 m 562 680.5 l 0.6 w 0.45 0.45 0.45 RG S
+BT /F1 9.3 Tf 1 0 0 1 50 666.5 Tm (Frontend developer with 9+ years of hands-on development. Built a landlord and tenant web portal from) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 50 654.5 Tm (scratch and delivered dozens of client websites and internal web systems end to end. Strong mathematics) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 50 642.5 Tm (foundation \(BS and MS in Mathematics\). Master of Science in Computer Science student at Westcliff) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 50 630.5 Tm (University, Orlando, with a concentration in Artificial Intelligence.) Tj ET
+BT /F2 10.5 Tf 1 0 0 1 50 611.0 Tm (EXPERIENCE) Tj ET
+50 608.0 m 562 608.0 l 0.6 w 0.45 0.45 0.45 RG S
+BT /F2 10 Tf 1 0 0 1 50 593.0 Tm (Independent Research and Projects, AI) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 50 582.0 Tm (Orlando, FL ╖ Aug 2024 Ц Present) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 50 569.9 Tm (Х) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 569.9 Tm (Research and build with LLM tooling: prompt engineering, Claude API, agent-driven development) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 557.8 Tm (workflows, and image generation.) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 50 545.7 Tm (Х) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 545.7 Tm (Built and published expo-tts-file, an open-source React Native / Expo native module with a) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 533.6 Tm (TypeScript API for on-device text-to-speech synthesis into audio files: on npm and) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 521.5 Tm (github.com/ksblazh/expo-tts-file, with CI and a test suite.) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 50 509.4 Tm (Х) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 509.4 Tm (Published a root-cause analysis of a regex-engine memory bug in a major open-source CLI, with) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 497.3 Tm (deterministic reproduction and upstream fix reference \(anthropics/claude-code#86238\).) Tj ET
+BT /F2 10 Tf 1 0 0 1 50 482.3 Tm (Freelance Web Developer) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 50 471.3 Tm (Remote ╖ Mar 2017 Ц Jul 2024) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 50 459.2 Tm (Х) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 459.2 Tm (Delivered dozens of client websites and internal web systems end to end: scoping, UI design,) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 447.1 Tm (development, launch, and support, with responsive, pixel-perfect layouts.) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 50 435.0 Tm (Х) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 435.0 Tm (Built custom sites with HTML, CSS, and JavaScript; delivered projects on WordPress and Tilda.) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 50 422.9 Tm (Х) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 422.9 Tm (Built an order portal with product calculators for a building materials company, still live in) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 410.8 Tm (production: orders.avotini.lv) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 50 398.7 Tm (Х) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 398.7 Tm (Developed a custom WordPress plugin for creating and editing content through the WordPress REST API,) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 386.6 Tm (embedded seamlessly into a React Native app.) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 50 374.5 Tm (Х) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 374.5 Tm (Built an admin system on Laravel for a healthcare marketplace, with non-trivial internal logic.) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 50 362.4 Tm (Х) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 362.4 Tm (Integrated third-party services: Stripe payments, Google and Apple sign-in, and other REST APIs.) Tj ET
+BT /F2 10 Tf 1 0 0 1 50 347.4 Tm (Frontend Developer Ц IE Krivonogov \(web studio\)) Tj ET
+BT /F1 8.8 Tf 1 0 0 1 50 336.4 Tm (Russia ╖ Aug 2015 Ц Mar 2017) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 50 324.3 Tm (Х) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 324.3 Tm (Built a web portal for landlords and tenants from scratch.) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 50 312.2 Tm (Х) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 312.2 Tm (Contributed to the development of a neural network project.) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 50 300.1 Tm (Х) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 300.1 Tm (Coordinated two developers on team projects.) Tj ET
+BT /F2 10.5 Tf 1 0 0 1 50 280.6 Tm (SKILLS) Tj ET
+50 277.6 m 562 277.6 l 0.6 w 0.45 0.45 0.45 RG S
+BT /F1 9.3 Tf 1 0 0 1 50 263.5 Tm (Х) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 263.5 Tm (Frontend: JavaScript, React, React Native, Vue, HTML, CSS, responsive design) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 50 251.4 Tm (Х) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 251.4 Tm (Backend: PHP, Node.js, REST APIs, MySQL, PostgreSQL) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 50 239.3 Tm (Х) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 239.3 Tm (CMS and tools: WordPress, Tilda, Git) Tj ET
+BT /F2 10.5 Tf 1 0 0 1 50 219.8 Tm (EDUCATION) Tj ET
+50 216.8 m 562 216.8 l 0.6 w 0.45 0.45 0.45 RG S
+BT /F1 9.3 Tf 1 0 0 1 50 202.7 Tm (Х) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 202.7 Tm (MS in Computer Science, Artificial Intelligence concentration Ц Westcliff University, Orlando, FL.) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 190.6 Tm (Starting Aug 2026, expected 2028.) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 50 178.5 Tm (Х) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 178.5 Tm (BS and MS in Mathematics Ц Tver State University, 2007. Emphasis in mathematical logic and algorithm) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 166.4 Tm (theory.) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 50 154.3 Tm (Х) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 154.3 Tm (BS in Education \(Mathematics\) Ц Tver State University, 2007.) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 50 142.2 Tm (Х) Tj ET
+BT /F1 9.3 Tf 1 0 0 1 61 142.2 Tm (US equivalency of both degrees established by a NACES member evaluation.) Tj ET
+BT /F2 10.5 Tf 1 0 0 1 50 122.7 Tm (LANGUAGES) Tj ET
+50 119.7 m 562 119.7 l 0.6 w 0.45 0.45 0.45 RG S
+BT /F1 9.3 Tf 1 0 0 1 50 105.7 Tm (Russian \(native\) ╖ English \(professional working proficiency\)) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000257 00000 n 
+0000000354 00000 n 
+0000000456 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+6339
+%%EOF
