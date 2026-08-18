@@ -10,8 +10,7 @@ export const site = {
     "9+ years of hands-on web development. React and React Native. MS in Mathematics, now researching AI-assisted workflows.",
   email: "ksblazh@gmail.com",
   github: "https://github.com/ksblazh",
-  // Joins the contact row once the profile is live.
-  linkedin: null as string | null,
+  linkedin: "https://www.linkedin.com/in/ksblazh" as string | null,
   // Set to null to hide the Resume buttons (e.g. while the PDF is being
   // replaced) rather than point them at a 404.
   resumeUrl: "/resume.pdf" as string | null,
