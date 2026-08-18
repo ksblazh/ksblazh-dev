@@ -162,6 +162,45 @@ export default function Home() {
                 </article>
               </Reveal>
             ))}
+            {/* Colophon — the site itself is the freshest exhibit; the one
+                card that links to source you can actually read. */}
+            <Reveal as="li" className="sm:col-span-2" delay={0.1}>
+              <article className="glow-card flex h-full flex-col rounded-lg border border-edge bg-card p-5">
+                <p aria-hidden="true" className="font-mono text-sm text-muted">
+                  <span className="text-accent">~</span> $ cat colophon
+                </p>
+                <h3 className="mt-3 font-semibold">{site.domain}</h3>
+                <p className="mt-2 max-w-prose text-sm text-muted">
+                  The site you are reading, built as its own exhibit. Fully
+                  static, both themes from one token set, animations on a
+                  strict transform/opacity budget, Lighthouse 95+ across all
+                  four categories on mobile.
+                </p>
+                <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-3">
+                  <ul aria-label="Stack" className="flex flex-wrap gap-1.5">
+                    {["Next.js", "TypeScript", "Tailwind", "Framer Motion", "View Transitions"].map(
+                      (s) => (
+                        <li
+                          key={s}
+                          className="rounded border border-edge px-1.5 py-0.5 font-mono text-xs text-muted"
+                        >
+                          {s}
+                        </li>
+                      )
+                    )}
+                  </ul>
+                  <a
+                    className="slide-link ml-auto inline-flex items-center gap-1.5 font-mono text-sm text-accent"
+                    href={site.repo}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Source
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </article>
+            </Reveal>
           </ul>
         </section>
 
