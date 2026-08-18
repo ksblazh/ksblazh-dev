@@ -56,7 +56,7 @@ const personJsonLd = {
   jobTitle: site.role,
   url: site.url,
   email: `mailto:${site.email}`,
-  sameAs: [site.github],
+  sameAs: [site.github, ...(site.linkedin ? [site.linkedin] : [])],
 };
 
 // Slot in the hero stagger (globals.css .rise); a helper because CSS custom
