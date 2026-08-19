@@ -35,10 +35,14 @@ const works = [
   {
     title: "Public engineering work",
     task: "A Claude Code host-freeze incident needed a root cause, not a workaround.",
-    did: "Traced it to the vendored ugrep, matched the upstream fix, shipped a deterministic reproduction — posted as an RCA comment.",
+    did: "Traced it to the vendored ugrep, shipped a deterministic reproduction, then verified the upstream fix on the original artifact: 7.5 GB peak down to 347 MB.",
     stack: ["Linux", "cgroups", "regex engines"],
     links: [
-      { href: "https://github.com/anthropics/claude-code/issues/86238", label: "anthropics/claude-code#86238" },
+      { href: "https://github.com/anthropics/claude-code/issues/86238", label: "RCA #86238" },
+      {
+        href: "https://github.com/anthropics/claude-code/issues/82179#issuecomment-5347207995",
+        label: "Fix verified #82179",
+      },
     ],
   },
 ];
