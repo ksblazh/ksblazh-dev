@@ -14,7 +14,8 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/ksblazh" as string | null,
   // Set to null to hide the Resume buttons (e.g. while the PDF is being
   // replaced) rather than point them at a 404.
-  resumeUrl: "/resume.pdf" as string | null,
+  // Named for the download folder it lands in, not for the repo.
+  resumeUrl: "/Kseniia-Blazhkovskaia-Resume.pdf" as string | null,
   // GA4 measurement id comes from the deploy environment, not the repo, so
   // enabling analytics is a hosting setting rather than a code change.
   gaId: process.env.NEXT_PUBLIC_GA_ID ?? null,
