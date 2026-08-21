@@ -17,7 +17,8 @@ const works = [
   {
     title: "expo-tts-file",
     task: "React Native apps needed on-device text-to-speech rendered into audio files, offline.",
-    did: "Authored a React Native / Expo native module with a TypeScript API for both platforms.",
+    did:
+      "Authored the Expo native module in Swift and Kotlin behind one typed TypeScript API. Verified on physical iOS and Android devices; CI runs typecheck, lint and 28 tests.",
     stack: ["Expo Modules", "Kotlin", "Swift", "TypeScript"],
     // The tts.ksblazh.dev landing joins this list once it is live.
     links: [
