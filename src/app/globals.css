@@ -14,13 +14,52 @@
 :root {
   color-scheme: light dark;
 
-  --canvas: light-dark(#f6f9f8, #0a0f14);
-  --card: light-dark(#ffffff, #101720);
-  --fg: light-dark(#101c1a, #e2ecf2);
-  --muted: light-dark(#4e6360, #9fb1bd);
-  --accent: light-dark(#087454, #3ce6a5);
-  --edge: light-dark(rgba(16, 28, 26, 0.14), rgba(226, 236, 242, 0.1));
-  --grid-dot: light-dark(rgba(16, 28, 26, 0.07), rgba(226, 236, 242, 0.055));
+  /* One pair per token holds both readings; the token itself only picks a
+     side. Splitting it this way keeps a single source for every value and
+     lets one side be pinned without repeating it, which is what the colophon
+     swatches do to show both schemes at once. Forcing `color-scheme` on a
+     child does not work for that: light-dark() resolves against the root. */
+  --canvas-light: #f6f9f8;
+  --canvas-dark: #0a0f14;
+  --card-light: #ffffff;
+  --card-dark: #101720;
+  --fg-light: #101c1a;
+  --fg-dark: #e2ecf2;
+  --muted-light: #4e6360;
+  --muted-dark: #9fb1bd;
+  --accent-light: #087454;
+  --accent-dark: #3ce6a5;
+  --edge-light: rgba(16, 28, 26, 0.14);
+  --edge-dark: rgba(226, 236, 242, 0.1);
+  --grid-dot-light: rgba(16, 28, 26, 0.07);
+  --grid-dot-dark: rgba(226, 236, 242, 0.055);
+
+  --canvas: light-dark(var(--canvas-light), var(--canvas-dark));
+  --card: light-dark(var(--card-light), var(--card-dark));
+  --fg: light-dark(var(--fg-light), var(--fg-dark));
+  --muted: light-dark(var(--muted-light), var(--muted-dark));
+  --accent: light-dark(var(--accent-light), var(--accent-dark));
+  --edge: light-dark(var(--edge-light), var(--edge-dark));
+  --grid-dot: light-dark(var(--grid-dot-light), var(--grid-dot-dark));
+}
+
+/* Pins one reading of the tokens the colophon puts side by side. */
+.scheme-light {
+  --canvas: var(--canvas-light);
+  --card: var(--card-light);
+  --fg: var(--fg-light);
+  --muted: var(--muted-light);
+  --accent: var(--accent-light);
+  --edge: var(--edge-light);
+}
+
+.scheme-dark {
+  --canvas: var(--canvas-dark);
+  --card: var(--card-dark);
+  --fg: var(--fg-dark);
+  --muted: var(--muted-dark);
+  --accent: var(--accent-dark);
+  --edge: var(--edge-dark);
 }
 
 :root[data-theme="light"] {
