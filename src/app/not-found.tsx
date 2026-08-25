@@ -5,7 +5,7 @@ import { ViewTransition } from "react";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: `404 — ${site.name}`,
+  title: `404 | ${site.name}`,
   robots: { index: false },
 };
 

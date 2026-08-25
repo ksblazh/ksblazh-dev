@@ -23,21 +23,23 @@ const mono = localFont({
   display: "swap",
 });
 
+const pageTitle = `${site.name} | ${site.role}`;
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: `${site.name} — ${site.role}`,
+  title: pageTitle,
   description: site.tagline,
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     url: "/",
     siteName: site.domain,
-    title: `${site.name} — ${site.role}`,
+    title: pageTitle,
     description: site.tagline,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} — ${site.role}`,
+    title: pageTitle,
     description: site.tagline,
   },
 };

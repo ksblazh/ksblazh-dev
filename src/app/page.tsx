@@ -18,7 +18,7 @@ const works = [
     title: "expo-tts-file",
     task: "React Native apps needed on-device text-to-speech rendered into audio files, offline.",
     did:
-      "Authored the Expo native module in Swift and Kotlin behind one typed TypeScript API. Verified on physical iOS and Android devices; CI runs typecheck, lint and 28 tests.",
+      "Authored the Expo native module in Swift and Kotlin behind one typed TypeScript API. Speech input takes SSML and IPA as well as plain text, so pronunciation is specified rather than guessed by the platform voice. Verified on physical iOS and Android devices; CI compiles it for iOS and Android on every pull request and runs typecheck, lint and 34 tests.",
     stack: ["Expo Modules", "Kotlin", "Swift", "TypeScript"],
     // The tts.ksblazh.dev landing joins this list once it is live.
     links: [
@@ -49,10 +49,23 @@ const works = [
 ];
 
 const skills = [
-  { group: "Frontend", items: "JavaScript, TypeScript, React, React Native, Vue, HTML, CSS, responsive design" },
-  { group: "Backend", items: "PHP, Node.js, REST APIs, MySQL, PostgreSQL" },
+  {
+    group: "Frontend",
+    items: "JavaScript, TypeScript, React, React Native, Next.js, Vue, HTML, CSS, Tailwind, responsive design",
+  },
+  { group: "State", items: "Redux, MobX, MobX-State-Tree, Zustand, React Context, custom stores" },
+  { group: "Design systems", items: "design tokens, theming, light and dark" },
+  { group: "Testing and CI", items: "Jest, end-to-end tests, typecheck and lint in CI" },
+  { group: "Accessibility", items: "semantic markup, keyboard navigation, screen readers" },
+  { group: "Backend", items: "PHP, Node.js, REST APIs, GraphQL, MySQL, PostgreSQL" },
   { group: "CMS and tools", items: "WordPress, Tilda, Git" },
 ];
+
+// The colophon shows the token set instead of claiming it. Both halves of a
+// swatch read the same var(); .scheme-light/.scheme-dark in globals.css pin
+// one reading each, and every half sits on its own --canvas so translucent
+// tokens like --edge show their real weight.
+const tokens = ["--canvas", "--card", "--fg", "--muted", "--accent", "--edge"];
 
 const personJsonLd = {
   "@context": "https://schema.org",
@@ -181,6 +194,33 @@ export default function Home() {
                   strict transform/opacity budget, Lighthouse 95+ across all
                   four categories on mobile.
                 </p>
+                <div className="mt-4 rounded border border-edge p-3">
+                  <p className="font-mono text-xs text-muted">
+                    one token set, left light and right dark
+                  </p>
+                  <ul className="mt-2.5 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-6">
+                    {tokens.map((t) => (
+                      <li key={t}>
+                        <div className="flex overflow-hidden rounded-sm border border-edge">
+                          <span
+                            aria-hidden="true"
+                            className="scheme-light h-7 flex-1"
+                            style={{ background: `linear-gradient(var(${t}), var(${t})), var(--canvas)` }}
+                          />
+                          <span
+                            aria-hidden="true"
+                            className="scheme-dark h-7 flex-1 border-l"
+                            style={{
+                              background: `linear-gradient(var(${t}), var(${t})), var(--canvas)`,
+                              borderColor: "var(--edge)",
+                            }}
+                          />
+                        </div>
+                        <p className="mt-1 font-mono text-xs text-muted">{t}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                 <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-3">
                   <ul aria-label="Stack" className="flex flex-wrap gap-1.5">
                     {["Next.js", "TypeScript", "Tailwind", "Framer Motion", "View Transitions"].map(
