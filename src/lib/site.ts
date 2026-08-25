@@ -7,7 +7,7 @@ export const site = {
   name: "Kseniia Blazhkovskaia",
   role: "Frontend Developer",
   tagline:
-    "Working across web and mobile in React, React Native and TypeScript. MS in Mathematics, now researching AI-assisted workflows.",
+    "Working across web and mobile in React, React Native, Next.js and TypeScript. MS in Mathematics, now researching AI-assisted workflows.",
   email: "ksblazh@gmail.com",
   github: "https://github.com/ksblazh",
   repo: "https://github.com/ksblazh/ksblazh-dev",

@@ -257,15 +257,15 @@ export default function Home() {
           </Reveal>
           <Reveal>
             <p className="mt-8 max-w-prose leading-relaxed">
-              Web and mobile, in React, React Native and TypeScript. A web
-              studio first, then freelance. Built a landlord and tenant portal
-              from scratch at the studio and coordinated a development team
-              there. Delivered dozens of client sites and internal systems end
-              to end on freelance. BS and MS in Mathematics, with an emphasis
-              on mathematical logic and theory of algorithms. Now pursuing an
-              MSCS (AI) at Westcliff University, Orlando, researching LLM
-              tooling and agentic development with the Claude API and Claude
-              Code.
+              Web and mobile, in React, React Native, Next.js and
+              TypeScript. A web studio first, then freelance. Built a
+              landlord and tenant portal from scratch at the studio and
+              coordinated a development team there. Delivered dozens of
+              client sites and internal systems end to end on freelance.
+              BS and MS in Mathematics, with an emphasis on mathematical
+              logic and theory of algorithms. Now pursuing an MSCS (AI) at
+              Westcliff University, Orlando, researching LLM tooling and
+              agentic development with the Claude API and Claude Code.
             </p>
           </Reveal>
         </section>
