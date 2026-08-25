@@ -36,7 +36,7 @@ const works = [
   {
     title: "Public engineering work",
     task: "A Claude Code host-freeze incident needed a root cause, not a workaround.",
-    did: "Traced it to the vendored ugrep, shipped a deterministic reproduction, then verified the upstream fix on the original artifact: 7.5 GB peak down to 347 MB.",
+    did: "Traced it to the vendored ugrep, shipped a deterministic reproduction, then verified the upstream fix on the original artifact: 7,569 MiB peak down to 347 MiB.",
     stack: ["Linux", "cgroups", "regex engines"],
     links: [
       { href: "https://github.com/anthropics/claude-code/issues/86238", label: "RCA #86238" },
@@ -49,7 +49,7 @@ const works = [
 ];
 
 const skills = [
-  { group: "Frontend", items: "JavaScript, React, React Native, Vue, HTML, CSS, responsive design" },
+  { group: "Frontend", items: "JavaScript, TypeScript, React, React Native, Vue, HTML, CSS, responsive design" },
   { group: "Backend", items: "PHP, Node.js, REST APIs, MySQL, PostgreSQL" },
   { group: "CMS and tools", items: "WordPress, Tilda, Git" },
 ];
@@ -217,12 +217,15 @@ export default function Home() {
           </Reveal>
           <Reveal>
             <p className="mt-8 max-w-prose leading-relaxed">
-              9+ years across a web studio and freelance: an order portal built
-              from scratch, dozens of sites and internal systems. BS and MS in
-              Mathematics (mathematical logic and theory of algorithms). Now
-              pursuing an MSCS (AI) at Westcliff University, Orlando —
-              researching LLM tooling and agentic development with the Claude
-              API and Claude Code.
+              Web and mobile, in React, React Native and TypeScript. A web
+              studio first, then freelance. Built a landlord and tenant portal
+              from scratch at the studio and coordinated a development team
+              there. Delivered dozens of client sites and internal systems end
+              to end on freelance. BS and MS in Mathematics, with an emphasis
+              on mathematical logic and theory of algorithms. Now pursuing an
+              MSCS (AI) at Westcliff University, Orlando, researching LLM
+              tooling and agentic development with the Claude API and Claude
+              Code.
             </p>
           </Reveal>
         </section>
