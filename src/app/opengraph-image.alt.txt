@@ -1,1 +1,1 @@
-Kseniia Blazhkovskaia, Frontend Developer. Working across web and mobile in React, React Native and TypeScript. MS in Mathematics, now researching AI-assisted workflows. ksblazh.dev
+Kseniia Blazhkovskaia, Frontend Developer. Working across web and mobile in React, React Native, Next.js and TypeScript. MS in Mathematics, now researching AI-assisted workflows. ksblazh.dev
