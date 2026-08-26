@@ -10,9 +10,10 @@ const works = [
   {
     title: "Order portal with product calculators",
     task: "Building-materials company needed customers to configure and order products with non-trivial quantity math.",
-    did: "Built the portal from scratch; it is still live in production.",
+    did:
+      "Built the portal from scratch; it is still in production. Product configurators with validated dimension ranges and conditional option groups for windows, gates, doors and materials.",
     stack: ["PHP", "MySQL", "JavaScript"],
-    links: [{ href: "https://orders.avotini.lv", label: "orders.avotini.lv" }],
+    links: [],
   },
   {
     title: "expo-tts-file",
