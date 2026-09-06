@@ -5,7 +5,7 @@ export const site = {
   url: "https://ksblazh.dev",
   domain: "ksblazh.dev",
   name: "Kseniia Blazhkovskaia",
-  role: "Frontend Developer",
+  role: "Mobile and Web Engineer",
   tagline:
     "Working across web and mobile in React, React Native, Next.js and TypeScript. MS in Mathematics, now researching AI-assisted workflows.",
   email: "ksblazh@gmail.com",

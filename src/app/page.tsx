@@ -258,21 +258,21 @@ export default function Home() {
           </Reveal>
           <Reveal>
             <p className="mt-8 max-w-prose leading-relaxed">
-              Web and mobile, in React, React Native, Next.js and
-              TypeScript, and in Swift and Kotlin where an app has to
-              reach the platform itself, as in expo-tts-file, an open
-              source Expo module for on-device speech synthesis. Dozens of
-              client sites and internal systems delivered end to end:
-              scoping, UI design, development, launch and support. One of
-              them, an order portal, is still in production and lets the
-              company change its own pricing rules without a developer.
-              Built a landlord and tenant portal from scratch, the full
-              product from data model to interface, and coordinated the
-              development team on it. BS and MS in Mathematics, with an
-              emphasis on mathematical logic and theory of algorithms. Now
-              pursuing an MSCS (AI) at Westcliff University, Orlando,
-              researching LLM tooling and agentic development with the
-              Claude API and Claude Code.
+              React, React Native, Next.js and TypeScript, and Swift and
+              Kotlin where an app has to reach the platform itself, as in
+              expo-tts-file, an open source Expo module for on-device
+              speech synthesis. Dozens of client sites and internal
+              systems delivered end to end: scoping, UI design,
+              development, launch and support. One of them, an order
+              portal, is still in production and lets the company change
+              its own pricing rules without a developer. Built a landlord
+              and tenant portal from scratch, the full product from data
+              model to interface, and coordinated the development team on
+              it. BS and MS in Mathematics, with an emphasis on
+              mathematical logic and theory of algorithms. Now pursuing an
+              MSCS (AI) at Westcliff University, Orlando, researching LLM
+              tooling and agentic development with the Claude API and
+              Claude Code.
             </p>
           </Reveal>
         </section>
