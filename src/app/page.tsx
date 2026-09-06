@@ -8,10 +8,10 @@ import { site } from "@/lib/site";
 
 const works = [
   {
-    title: "Order portal with product calculators",
-    task: "Building-materials company needed customers to configure and order products with non-trivial quantity math.",
+    title: "Order portal with product configurators",
+    task: "A building materials company needed customers to configure and price products themselves, and needed to change those prices later without a developer.",
     did:
-      "Built the portal from scratch; it is still in production. Product configurators with validated dimension ranges and conditional option groups for windows, gates, doors and materials.",
+      "Built the portal from scratch; it is still in production. Six product lines, each with its own pricing rules: dimensions validated against the ranges the product allows, option groups that switch each other on and off, and options that change the coefficient applied to those dimensions. A finished configuration becomes an order, and the company edits the rules and the prices itself through an admin panel.",
     stack: ["PHP", "MySQL", "JavaScript"],
     links: [],
   },
@@ -259,14 +259,20 @@ export default function Home() {
           <Reveal>
             <p className="mt-8 max-w-prose leading-relaxed">
               Web and mobile, in React, React Native, Next.js and
-              TypeScript. A web studio first, then freelance. Built a
-              landlord and tenant portal from scratch at the studio and
-              coordinated a development team there. Delivered dozens of
-              client sites and internal systems end to end on freelance.
-              BS and MS in Mathematics, with an emphasis on mathematical
-              logic and theory of algorithms. Now pursuing an MSCS (AI) at
-              Westcliff University, Orlando, researching LLM tooling and
-              agentic development with the Claude API and Claude Code.
+              TypeScript, and in Swift and Kotlin where an app has to
+              reach the platform itself, as in expo-tts-file, an open
+              source Expo module for on-device speech synthesis. Dozens of
+              client sites and internal systems delivered end to end:
+              scoping, UI design, development, launch and support. One of
+              them, an order portal, is still in production and lets the
+              company change its own pricing rules without a developer.
+              Built a landlord and tenant portal from scratch, the full
+              product from data model to interface, and coordinated the
+              development team on it. BS and MS in Mathematics, with an
+              emphasis on mathematical logic and theory of algorithms. Now
+              pursuing an MSCS (AI) at Westcliff University, Orlando,
+              researching LLM tooling and agentic development with the
+              Claude API and Claude Code.
             </p>
           </Reveal>
         </section>
