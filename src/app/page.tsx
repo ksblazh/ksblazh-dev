@@ -19,12 +19,15 @@ const works = [
     title: "expo-tts-file",
     task: "React Native apps needed on-device text-to-speech rendered into audio files, offline.",
     did:
-      "Authored the Expo native module in Swift and Kotlin behind one typed TypeScript API. Speech input takes SSML and IPA as well as plain text, so pronunciation is specified rather than guessed by the platform voice. Verified on physical iOS and Android devices; CI compiles it for iOS and Android on every pull request and runs typecheck, lint and 34 tests.",
+      "Authored the Expo native module in Swift and Kotlin behind one typed TypeScript API. Speech input takes SSML and IPA as well as plain text, so pronunciation is specified rather than guessed by the platform voice. Verified on physical iOS and Android devices; CI compiles it for iOS and Android on every pull request and runs typecheck, lint and 40+ tests.",
     stack: ["Expo Modules", "Kotlin", "Swift", "TypeScript"],
     // The tts.ksblazh.dev landing joins this list once it is live.
     links: [
       { href: "https://github.com/ksblazh/expo-tts-file", label: "GitHub" },
       { href: "https://www.npmjs.com/package/expo-tts-file", label: "npm" },
+      // The directory ranks it live; linking beats printing a rank that goes
+      // stale the moment someone else publishes.
+      { href: "https://reactnative.directory/?search=expo-tts-file", label: "React Native Directory" },
     ],
   },
   {
@@ -54,6 +57,7 @@ const skills = [
     group: "Frontend",
     items: "JavaScript, TypeScript, React, React Native, Next.js, Vue, HTML, CSS, Tailwind, responsive design",
   },
+  { group: "Mobile native", items: "Swift, Kotlin, Expo Modules" },
   { group: "State", items: "Redux, MobX, MobX-State-Tree, Zustand, React Context, custom stores" },
   { group: "Design systems", items: "design tokens, theming, light and dark" },
   { group: "Testing and CI", items: "Jest, end-to-end tests, typecheck and lint in CI" },
