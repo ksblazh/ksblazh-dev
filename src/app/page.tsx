@@ -31,6 +31,16 @@ const works = [
     ],
   },
   {
+    title: "relocals.org",
+    task: "Multilingual nonprofit site on Astro, with hand-drawn SVG and CSS animation.",
+    did:
+      "A multilingual site (English, Russian and Ukrainian so far) for a nonprofit that I designed, built, animated and published. Static pages on Astro, no server and no database. Every illustration is hand-drawn SVG, animated in CSS without animation libraries. The languages run on my own i18n code, and the visitor's choice is remembered in the browser. A build step on sharp strips EXIF data and geotags from gallery photos and resizes them. Cloudflare Pages rebuilds the site from GitHub within a couple of minutes of each push, with a production branch and a preview branch. I set up Pages CMS so the client edits texts in every language and uploads photos without a developer. No ads and no visitor tracking.",
+    stack: ["Astro", "SVG", "CSS animation", "i18n", "sharp", "Cloudflare Pages", "Pages CMS"],
+    // The source repo is private: the live site is the only link.
+    links: [{ href: "https://relocals.org/", label: "relocals.org" }],
+    wide: true,
+  },
+  {
     title: "WordPress → React Native content pipeline",
     task: "Editors needed to keep authoring in WordPress while the content ships inside a mobile app.",
     did: "Built a custom WP plugin: create/edit content via the WordPress REST API with seamless delivery into the React Native app.",
@@ -63,7 +73,7 @@ const skills = [
   { group: "Testing and CI", items: "Jest, end-to-end tests, typecheck and lint in CI" },
   { group: "Accessibility", items: "semantic markup, keyboard navigation, screen readers" },
   { group: "Backend", items: "PHP, Node.js, REST APIs, GraphQL, MySQL, PostgreSQL" },
-  { group: "CMS and tools", items: "WordPress, Tilda, Git" },
+  { group: "CMS and tools", items: "WordPress, Tilda, Astro, Cloudflare Pages, Git" },
 ];
 
 // The colophon shows the token set instead of claiming it. Both halves of a
@@ -151,7 +161,12 @@ export default function Home() {
           </Reveal>
           <ul className="mt-8 grid gap-4 sm:grid-cols-2">
             {works.map((w, i) => (
-              <Reveal key={w.title} as="li" delay={i * 0.07}>
+              <Reveal
+                key={w.title}
+                as="li"
+                className={"wide" in w && w.wide ? "sm:col-span-2" : undefined}
+                delay={i * 0.07}
+              >
                 <article className="glow-card flex h-full flex-col rounded-lg border border-edge bg-card p-5">
                   <h3 className="font-semibold">{w.title}</h3>
                   <p className="mt-2 text-sm text-muted">{w.task}</p>
